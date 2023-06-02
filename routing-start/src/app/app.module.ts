@@ -18,7 +18,8 @@ const appRoutes: Routes = [
   { path: 'servers', component: ServersComponent },     //localhost:4200/servers
   { path: 'users', component: UsersComponent },     //localhost:4200/users
   { path: 'users/:id/:name', component: UserComponent },     //localhost:4200/users
-  { path: 'servers/:id/edit', component: EditServerComponent }
+  { path: 'servers/:id/edit', component: EditServerComponent },
+  { path: 'servers/:id', component: ServerComponent }
 
 ];
 
