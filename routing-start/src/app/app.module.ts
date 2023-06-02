@@ -11,6 +11,14 @@ import { UserComponent } from './users/user/user.component';
 import { EditServerComponent } from './servers/edit-server/edit-server.component';
 import { ServerComponent } from './servers/server/server.component';
 import { ServersService } from './servers/servers.service';
+import { Routes, RouterModule } from '@angular/router';
+
+const appRoutes: Routes = [
+  { path: '', component: HomeComponent },     //localhost:4200
+  { path: 'servers', component: ServersComponent },     //localhost:4200/servers
+  { path: 'users', component: UsersComponent }     //localhost:4200/users
+
+];
 
 @NgModule({
   declarations: [
@@ -25,6 +33,7 @@ import { ServersService } from './servers/servers.service';
   imports: [
     BrowserModule,
     FormsModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [ServersService],
   bootstrap: [AppComponent]
