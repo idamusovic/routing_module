@@ -23,7 +23,8 @@ const appRoutes: Routes = [
   { path: 'users', component: UsersComponent, children: [
     { path: ':id/:name', component: UserComponent },
   ] },     //localhost:4200/users
-
+  { path: 'not-found', component: PageNotFoundComponent },
+  { path: '**', redirectTo: '/not-found' }
   
 ];
 
